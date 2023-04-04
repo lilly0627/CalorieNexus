@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-toolbar color="success">
+		<ion-title>Login</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding" [fullscreen]="true">
+	<ion-card>
+		<ion-card-header>
+			<ion-card-title style="font-size:large;" color="success">Welcome to CalorieNexus!</ion-card-title>
+		</ion-card-header>
+
+		<ion-card-content>
+			<form (ngSubmit)="login()" [formGroup]="credentials">
+				<ion-item fill="solid" class="ion-margin-bottom">
+					<ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+				</ion-item>
+
+				<ion-item fill="solid" class="ion-margin-bottom">
+					<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+				</ion-item>
+		
+				<ion-button type="submit" expand="block" [disabled]="!credentials.valid" color="success">Log in</ion-button>
+				<ion-button type="button" expand="block"  (click)="register()" color="success">Create account</ion-button>
+			</form>
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>

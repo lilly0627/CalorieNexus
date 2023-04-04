@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Restaurants</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content >
+    
+  <h5><ion-img src="https://global-uploads.webflow.com/5eec789d24d891b6d1d15438/5f2082af2ea8fe9057a1d84a_b01_RSM-Design_Anteatery-Food-Hall_Blade-Sign-Design-p-2000.jpeg"
+    alt="Anteatery"></ion-img> 
+    <ion-button type="button" expand="block"  color = "success" (click) = "getAnteateryMenus()">Anteatery</ion-button></h5>
+
+  <h5><ion-img src="https://studentcenter.uci.edu/wp-content/uploads/2022/01/brandywine-1.jpg"
+    alt="Anteatery" width = "50px"></ion-img> 
+    <ion-button float-right type="button" expand="block"  color = "success" (click)="getBrandywineMenus()">Brandywine</ion-button></h5>
+
+    <capacitor-google-map #map>
+
+    </capacitor-google-map>
+
+    <ion-button float-right type="button" expand="block"  color = "success" (click)="getNearbyRestaurants()">Nearby restaurants</ion-button>
+  
+    <div id="map">
+      <p>Current Latitude: {{myLat}}</p>
+      <p>Current Longitude: {{myLong}}</p>
+
+
+    </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success"  style="font-size: x-small;" fill="clear" (click)="goToHome()">Home</ion-button>
+  
+        </ion-col>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success" style="font-size: x-small;" >Restaurants</ion-button>
+
+        </ion-col>
+
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success" style="font-size: x-small;" fill="clear" (click)="goToAccount()">Account</ion-button>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+
+</ion-footer>
+

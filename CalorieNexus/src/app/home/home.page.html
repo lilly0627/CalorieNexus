@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >
+      CalorieNexus
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <h1>Hi, <br>{{username}}!</h1>
+  <h5>Today: {{getTodayDate()}}</h5>
+<h5>Your today's weight: {{weight}}  (kg)</h5>
+<h5>Your height: {{user_height}} (cm)</h5>
+<h5>Your ideal weight: {{idealWeight}} (kg)</h5>
+
+<h5>Your BMR: {{bmr}}</h5>
+<h5>You need <strong>{{bmr}} </strong>calories today.</h5>
+
+<ion-button expand="block" color="success" (click)="goToRecommendation()">Generate Top 3 Restaurants</ion-button>
+
+<h6 style="text-align: center;">Rememer to create/update your profile!</h6>
+<h6 style="text-align: center;">Once you fill out the profile form, click create/update!</h6>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success"  style="font-size: x-small;">Home</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success"  style="font-size: x-small;" fill="clear" (click)="goToRestaurants()">Restaurants</ion-button> 
+        </ion-col>
+        <ion-col>
+          <ion-button type="button" expand="block"  color = "success"  style="font-size: x-small;" fill="clear" (click)="goToAccount()">Account</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+   </ion-buttons>
+    <ion-title>Recommendation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5>My BMR: {{bmr}}</h5>
+  <h5>My latitude: {{myLat}}</h5>
+  <h5>My longitude: {{myLong}}</h5>
+
+  <h4>Top 3 Restaurants Recommended:</h4>
+  <ul>
+    <li *ngFor="let restaurant of nearby_collection">
+      {{ restaurant.restaurant_name }}
+      <p>Total score: {{restaurant.score}}</p>
+      <p> Distance: {{restaurant.distance}} km</p>
+      <ion-card *ngFor="let menu of restaurant.menu_list" >
+        <ion-card-content>
+          <!-- <ion-item lines="None"> -->
+            <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+            <ion-label>
+              {{menu.my_id}}
+              <p>Name: {{menu.name}}</p>
+              <p>Calorie: {{menu.calorie}}</p>
+            </ion-label>
+          <!-- </ion-item> -->
+        </ion-card-content>
+       </ion-card>
+    </li>
+  </ul>
+
+</ion-content>

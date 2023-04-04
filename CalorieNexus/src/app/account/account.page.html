@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color = "success">
+        Profile
+      </ion-card-title>
+    </ion-card-header>
+
+		<ion-card-content>
+            
+    <ion-item>
+      <h6>Personal Information</h6>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="font-size: medium;">{{username}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color = "success" position="floating">Gender: </ion-label>
+      <ion-input type="gender" [clearInput]="true"  placeholder="Male/Female" [(ngModel)]="gender"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Age: </ion-label>
+      <ion-input type="age" [clearInput]="true" placeholder="Integer" [(ngModel)]="age"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Height:</ion-label>
+      <ion-input type="height" [clearInput]="true" placeholder="Height in CM" [(ngModel)]="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Weight: </ion-label>
+      <ion-input type="weight" [clearInput]="true"  placeholder="Weight in KG" [(ngModel)]="weight"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h6 color = "success">Calorie Gained</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Today: </ion-label>
+      <ion-input type="calorieToday" [clearInput]="true" placeholder="Enter an integer" [(ngModel)]="calorieToday"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Yesterday: </ion-label>
+      <ion-input type="calorieYesterday" [clearInput]="true" placeholder="Enter an integer" [(ngModel)]="calorieYesterday"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <h6 color = "success">Your Goal</h6>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "success" position="floating">Ideal Weight: </ion-label>
+      <ion-input type="idealWeight" [clearInput]="true" value = "null" placeholder="Weight in KG" [(ngModel)]="idealWeight"></ion-input>
+    </ion-item>
+    <ion-button type="button" expand="block" fill="outline" color = "success" (click)="updateProfile()">Save</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+    <ion-button type="button" expand="block" (click)="logout()" color = "success">Logout</ion-button>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success"  style="font-size: x-small;" fill="clear" (click)="goToHome()">Home</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success"  style="font-size: x-small;" fill="clear" (click)="goToRestaurants()">Restaurants</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button type="button" expand="block" color = "success" style="font-size: x-small;">Account</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-footer>

@@ -1,0 +1,282 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+   </ion-buttons>
+    <ion-title>Nearby Restaurants</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <!-- <div *ngFor= "let menu of menus_list" > -->
+    <!-- <ion-card-content> -->
+      <!-- <ion-item> -->
+        <!-- <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon> -->
+        <!-- <ion-label> -->
+          <!-- <p>Asian Box</p> -->
+          <!-- above is object promise -->
+        <!-- </ion-label> -->
+
+        <!-- <ion-card *ngFor = "let menu of getMenus(restaurant)"> -->
+
+
+        <!-- </ion-card> -->
+        <!-- <div *ngVar = "getMenus(\'' + Asian Box' + \') as menus"> -->
+          <!-- <div *ngVar="getMenus(restaurant) as menus"> -->
+            <!-- <div *ngFor = "let menu of menus_list"> -->
+              <!-- <p>Name: {{menu.name}}</p>
+              <p>Calorie: {{menu.calorie}}</p> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+      <!-- </ion-item> -->
+    <!-- </ion-card-content> -->
+  <!-- </div> -->
+  <!-- <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Breakfast </ion-label> -->
+
+
+  <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Asian Box</ion-label>
+  <ion-card *ngFor="let menu of asian_box_menus_list" >
+   <ion-card-content>
+     <!-- <ion-item lines="None"> -->
+       <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+       <ion-label>
+         {{menu.my_id}}
+         <p>Name: {{menu.name}}</p>
+         <p>Calorie: {{menu.calorie}}</p>
+       </ion-label>
+     <!-- </ion-item> -->
+   </ion-card-content>
+  </ion-card>
+
+
+  <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Blaze Pizza</ion-label>
+  <ion-card *ngFor="let menu of blaze_pizza_menus_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Blue Bowl Superfoods</ion-label>
+
+   <ion-card *ngFor="let menu of blue_bowl_superfoods_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">California Gogi</ion-label>
+
+   <ion-card *ngFor="let menu of california_gogi_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Chick-fil-A</ion-label>
+
+   <ion-card *ngFor="let menu of chick_fil_a_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Chipotle</ion-label>
+
+   <ion-card *ngFor="let menu of chipotle_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Eurika!</ion-label>
+   <ion-card *ngFor="let menu of eurika_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Gyutan Ramen</ion-label>
+   <ion-card *ngFor="let menu of gyutan_ramen_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">In-N-Out Burger</ion-label>
+   <ion-card *ngFor="let menu of in_n_out_burger_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Luna Grill</ion-label>
+   <ion-card *ngFor="let menu of luna_grill_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Mad Dumplings</ion-label>
+   <ion-card *ngFor="let menu of mad_dumplings_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Northern Cafe</ion-label>
+   <ion-card *ngFor="let menu of northern_cafe_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Panda Express</ion-label>
+   <ion-card *ngFor="let menu of panda_express_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Slapfish</ion-label>
+   <ion-card *ngFor="let menu of slapfish_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Subway</ion-label>
+   <ion-card *ngFor="let menu of subway_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+   <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Wendy's</ion-label>
+   <ion-card *ngFor="let menu of wendys_menu_list" >
+    <ion-card-content>
+      <!-- <ion-item lines="None"> -->
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{menu.my_id}}
+          <p>Name: {{menu.name}}</p>
+          <p>Calorie: {{menu.calorie}}</p>
+        </ion-label>
+      <!-- </ion-item> -->
+    </ion-card-content>
+   </ion-card>
+
+
+
+</ion-content>

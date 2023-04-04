@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+   </ion-buttons>
+    <ion-title>Brandywine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <h4>Last updated on: {{getTodayDate()}}</h4>
+
+ <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Breakfast </ion-label>
+
+  <ion-card *ngFor="let meal of document_id_brandywine_breakfast" >
+    <ion-card-content>
+      <ion-item lines="None">
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{meal.my_id}}
+          <p>Calorie: {{meal.calorie}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+   </ion-card>
+
+ <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Lunch</ion-label>
+
+  <ion-card *ngFor="let meal of document_id_brandywine_lunch" >
+
+      <ion-card-content>
+        <ion-item lines="None">
+          <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+          <ion-label style="font-size: small;">
+            {{meal.my_id}}
+            <p>Calorie: {{meal.calorie}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+
+
+   </ion-card>
+
+
+ <ion-label color = "success" style="font-size: larger; font-weight: bold; font-style: italic;">Dinner</ion-label>
+
+  <ion-card *ngFor="let meal of document_id_brandywine_dinner" >
+    <ion-card-content>
+      <ion-item lines="None">
+        <ion-icon name="fast-food-outline" slot="start" color="success"></ion-icon>
+        <ion-label>
+          {{meal.my_id}}
+          <p>Calorie: {{meal.calorie}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+   </ion-card>
+
+</ion-content>
